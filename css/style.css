@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: 'Glysa';
+  src: url("../fonts/Glysa.woff") format("woff");
+  font-weight: normal;
+  font-style: sans-serif;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url("../fonts/Graphik.woff") format("woff");
+  font-weight: normal;
+  font-style: sans-serif;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url("../fonts/Helvetica.woff") format("woff");
+  font-weight: normal;
+  font-style: sans-serif;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Garamond';
+  src: url("../fonts/Garamond.woff") format("woff");
+  font-weight: normal;
+  font-style: serif;
+  font-display: swap;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100%;
+  background: #F4F4F4;
+  color: #000;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.dbaa {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[8];
+      grid-template-rows: repeat(8, 1fr);
+      grid-template-areas: ". . . . . . lineasuperior lineasuperior lineasuperior lineasuperior lineasuperior lineasuperior" ". . . . . logo logo . . . . ." ". . . . . logo logo . . . . ." ". . . nuestrotrabajo nuestrotrabajo lineavertical lineavertical lineaarttoys lineaarttoys . . ." ". . . nuestrotrabajo nuestrotrabajo somos somos lineaarttoys lineaarttoys . . ." ". . . . . somos somos . . . . ." ". . . . . somos somos . . . . ." ". . . . . mail mail . . . . .";
+  height: 100vh;
+}
+
+@media screen and (max-width: 576px) {
+  .dbaa {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: .5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: .5fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: "lineasuperior" "logo" "nuestrotrabajo" "lineaarttoys" "somos" "mail" "lineavertical";
+  }
+}
+
+.lineasuperior {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-area: lineasuperior;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media screen and (max-width: 576px) {
+  .lineasuperior {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.lineasuperior--linea {
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: 60rem;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  -webkit-transform: translateY(80%);
+          transform: translateY(80%);
+}
+
+@media screen and (max-width: 576px) {
+  .lineasuperior--linea {
+    width: 50%;
+    height: 60%;
+  }
+}
+
+.lineavertical {
+  -ms-grid-row: 4;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: lineavertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lineavertical--linea {
+  width: 1px;
+  height: 150%;
+  background: #000;
+}
+
+.logo {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: logo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .logo img {
+    width: 50%;
+  }
+}
+
+.nuestrotrabajo {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-area: nuestrotrabajo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.nuestrotrabajo::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url("../img/nuestrotrabajo.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: -1;
+}
+
+.nuestrotrabajo h4 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.4rem;
+}
+
+.nuestrotrabajo a {
+  margin: 0;
+  font-family: "Graphik", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #000;
+}
+
+.nuestrotrabajo a:hover {
+  text-decoration: underline;
+}
+
+.lineaarttoys {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 2;
+  grid-area: lineaarttoys;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.lineaarttoys::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url("../img/lineaarttoys.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+  .lineaarttoys {
+    margin-top: 2rem;
+  }
+}
+
+.lineaarttoys h4 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.4rem;
+}
+
+.lineaarttoys a {
+  margin: 0;
+  font-family: "Graphik", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #000;
+}
+
+.lineaarttoys a:hover {
+  text-decoration: underline;
+}
+
+.somos {
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: somos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (max-width: 576px) {
+  .somos {
+    margin-top: 2rem;
+  }
+}
+
+.somos::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url("../img/somos.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  z-index: -1;
+}
+
+.somos img {
+  max-width: 2rem;
+  margin-bottom: 1rem;
+}
+
+.somos p {
+  max-width: 90%;
+  margin: 0;
+  font-family: "Graphik", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: #000;
+}
+
+@media screen and (max-width: 576px) {
+  .somos p {
+    max-width: 60%;
+  }
+}
+
+.somos p span {
+  font-family: "Garamond", serif;
+  font-size: 1.7rem;
+}
+
+.mail {
+  -ms-grid-row: 8;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-area: mail;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mail a {
+  margin: 0;
+  font-family: "Graphik", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: #000;
+}
+
+.mail a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=style.css.map */
